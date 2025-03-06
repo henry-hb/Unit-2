@@ -1,6 +1,13 @@
+"""
+Name: Henry Hall-Brown
+Date: 3/6/2025
+Description: Unit 2 HW 1
+"""
+
 class Restaurant:
     def __init__(self, restaurant_name: str, cuisine_type: str):
-        """creates new restaurant object
+        """
+        creates new restaurant object
 
         Args:
             restaurant_name (str): name of restaurant
@@ -10,14 +17,21 @@ class Restaurant:
         self.cuisine_type = cuisine_type
     
     def describe_restaurant(self):
+        """
+        prints description of restaurant including its name and what kind of food it serves
+        """
         print(f"{self.restaurant_name} is a restaurant that serves {self.cuisine_type}.")
 
     def open_restaurant(self):
+        """
+        prints the name of the restaurant and that it is open
+        """
         print(f"{self.restaurant_name} is open!")
     
 class User:
     def __init__(self, first_name: str, last_name: str, height: int, mood: str):
-        """creates new user object
+        """
+        creates new user object
 
         Args:
             first_name (str): first name of user
@@ -31,9 +45,15 @@ class User:
         self.mood = mood
     
     def describe_user(self):
+        """
+        prints description of user including first and last name, height (in inches) and their current mood
+        """
         print(f"{self.first_name} {self.last_name} is {self.height} inches and is currently {(self.mood).lower()}.")
 
     def greet_user(self):
+        """
+        prints a greeting to the user with their first and last name
+        """
         print(f"Hello {self.first_name} {self.last_name}!")
 
 def main():
