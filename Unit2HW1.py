@@ -20,41 +20,37 @@ class Restaurant:
         """
         prints description of restaurant including its name and what kind of food it serves
         """
-        print(f"{self.restaurant_name} is a restaurant that serves {self.cuisine_type}.")
+        print(f"Restaurant name: {self.restaurant_name}\nRestaurant cuisine: {self.cuisine_type}")
 
     def open_restaurant(self):
         """
         prints the name of the restaurant and that it is open
         """
-        print(f"{self.restaurant_name} is open!")
+        print(f"{self.restaurant_name} is open")
     
 class User:
-    def __init__(self, first_name: str, last_name: str, height: int, mood: str):
+    def __init__(self, first_name: str, last_name: str):
         """
         creates new user object
 
         Args:
             first_name (str): first name of user
             last_name (str): last name of user
-            height (int): height of user (in inches)
-            mood (str): current mood of user
         """
         self.first_name = first_name
         self.last_name = last_name
-        self.height = height
-        self.mood = mood
     
     def describe_user(self):
         """
         prints description of user including first and last name, height (in inches) and their current mood
         """
-        print(f"{self.first_name} {self.last_name} is {self.height} inches and is currently {(self.mood).lower()}.")
+        print(f"First Name: {self.first_name}\nLast Name: {self.last_name}")
 
     def greet_user(self):
         """
         prints a greeting to the user with their first and last name
         """
-        print(f"Hello {self.first_name} {self.last_name}!")
+        print(f"Welcome {self.first_name}!")
 
 def main():
     restaurant_one = Restaurant("Wendy's", "Fast Food")
@@ -67,9 +63,9 @@ def main():
     restaurant_three.describe_restaurant()
     restaurant_three.open_restaurant()
     print("")
-    user_one = User("Henry", "Hall-Brown", "72", "Hungry")
-    user_two = User("Brandon", "Smith", "66", "Happy")
-    user_three = User("JT", "Nugent", "78", "Sleepy")
+    user_one = User("Henry", "Hall-Brown")
+    user_two = User("Brandon", "Smith")
+    user_three = User("JT", "Nugent")
     user_one.describe_user()
     user_one.greet_user()
     user_two.describe_user()
