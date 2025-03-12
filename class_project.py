@@ -1,3 +1,10 @@
+"""
+Name: Henry Hall-Brown
+Date: 3/12/2025 
+Description: TV class project
+"""
+
+
 class TV:
     """Represents a TV with a brand, size, and is either a smart TV or not."""
 
