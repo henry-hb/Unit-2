@@ -13,6 +13,7 @@ class Kiosk:
         Args:
             transaction_total (int): total cost of purchase
             total_items (int): total amount of items purchased
+            item_list (dictionary): dictionary of item names and cost of each item
         """
         self.transaction_total = 0
         self.total_items = 0 
