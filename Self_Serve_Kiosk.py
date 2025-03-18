@@ -6,7 +6,7 @@ Description: Self Serve Kiosk class assignment
 
 
 class Kiosk:
-    def __init__(self):
+    def __init__(self) -> None:
         """
         creates new kiosk object
 
@@ -27,7 +27,7 @@ class Kiosk:
         """
         return self.transaction_total
     
-    def add_item(self) -> none:
+    def add_item(self) -> None:
         """
         adds new item to item_list and increments total_items by 1 and adds item price to transaction_total
         :return: None
@@ -41,7 +41,7 @@ class Kiosk:
             self.item_list[name] = price
             adding_items = input("Would you like to add another item? ")
 
-    def take_payment(self) -> none:
+    def take_payment(self) -> None:
         """
         asks if user is using cash and calls give_change() if they use extra money than needed
         :return: None
@@ -55,7 +55,7 @@ class Kiosk:
             print("That is not enough money! Try again with more money ")
             self.finalize_purchase()
 
-    def give_change(self, money_provided):
+    def give_change(self, money_provided) -> None:
         """
         gives back change relating to how much extra cash they gave compared to the final price
         :return: None
@@ -63,7 +63,7 @@ class Kiosk:
         change = money_provided - self.transaction_total
         print(f"Your change is {change} dollars. Have a nice day!")
 
-    def finalize_purchase(self):
+    def finalize_purchase(self) -> None:
         """
         prints total cost and total items and calls take_payment() to coordinate the payment
         :return: None
@@ -71,7 +71,7 @@ class Kiosk:
         print(f"Your total amount is {self.total_items} items and {self.transaction_total} dollars.")
         self.take_payment()
 
-    def print_receipt(self):
+    def print_receipt(self) -> None:
         """
         prints item_list to print all item names and item prices in the dictionary
         :return: None
@@ -84,7 +84,7 @@ class Kiosk:
             print(self.item_list[i],end="")
             print(" dollars")
 
-def main():
+def main() -> None:
     """
     makes instance of kiosk class and tests all instance methods in the kiosk class
     :return: None
