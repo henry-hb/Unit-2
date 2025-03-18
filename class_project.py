@@ -8,7 +8,7 @@ Description: TV class project
 class TV:
     """Represents a TV with a brand, size, and is either a smart TV or not."""
 
-    def __init__(self, brand: str, size: int, is_smart_TV: bool):
+    def __init__(self, brand: str, size: int, is_smart_TV: bool) -> None:
         """
         creates new TV.
         
