@@ -37,9 +37,16 @@ class IceCreamStand(Restaurant):
         super().__init__(restaurant_name,cuisine_type)
         self.flavors = flavors
 
+    def print_flavors(self):
+        print("The available flavors are ",end="")
+        for i in range (len(self.flavors) - 1):
+            print (self.flavors[i], end = ", ")
+        print("and " + self.flavors[len(self.flavors) - 1])
+
 def main():
-    handels = IceCreamStand("Handels", "Ice Cream" ["Vanilla", "Chocolate", "Cookies and Cream"])
+    handels = IceCreamStand("Handels", "Ice Cream", ["Vanilla", "Chocolate", "Cookies and Cream", "Strawberry"])
     print(handels.flavors)
+    handels.print_flavors()
 
 if __name__ == "__main__":
     main()
