@@ -8,7 +8,7 @@ strings like "can add post", "can delete post", "can ban user", and so on.
 Write a method called show_privileges() that lists the administrator's set of
 privileges. Create an instance of Admin, and call your method.
 """
-
+from Unit2HW9-8 import privileges
 class User:
     def __init__(self, first_name: str, last_name: str):
         """
