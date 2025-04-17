@@ -1,5 +1,4 @@
 #create unique methods for each class
-
 class Plant:
     garden_size = 0
     def __init__(self, name, scientific_name, age = 0):
@@ -15,6 +14,9 @@ class Plant:
         if (self.name == other.name and self.scientific_name == other.scientific_name and self.age == other.age):
             return True
         return False
+    
+    def water(self):
+        print(f"Your {self.name} is feeling well watered.")
 
 class Spider_Plant(Plant):
     def __init__(self, name, scientific_name, age, num_plants):
@@ -29,6 +31,9 @@ class Spider_Plant(Plant):
         if (self.name == other.name and self.scientific_name == other.scientific_name and self.age == other.age and self.num_plants == other.num_plants):
             return True
         return False
+    
+    def __add__(self,other):
+        return self.num_plants + other.num_plants
     
 class Succulent(Plant):
     def __init__(self, name, scientific_name, age, bears_fruit: bool):
@@ -45,16 +50,26 @@ class Succulent(Plant):
         if (self.name == other.name and self.scientific_name == other.scientific_name and self.age == other.age and self.bears_fruit == other.bears_fruit):
             return True
         return False
+    
+    def water(self):
+        print(f"Make sure not to water your {self.name} too much!")
 
 def main():
     plant1 = Plant("tree", "genus species", 12)
-    plant2 = Plant("tree", "genus species", 12)
     print(plant1)
+    plant1.water()
+    plant2 = Plant("tree", "genus species", 12)
+    print(plant2)
     print(plant1 == plant2)
     spider1 = Spider_Plant("Young Spider Plant","Chlorophytum comosum", 1, 1)
     print(spider1)
+    spider1.water()
+    spider2 = Spider_Plant("Old Spider Plant", "Chlorophytum comosum", 30, 12)
+    print(spider2)
+    print(spider1 + spider2)
     succ1 = Succulent("Aloe Vera", "Aloe barbadensis Miller", 100, False)
     print(succ1)
+    succ1.water()
     print(Plant.garden_size)
 
 if __name__ == "__main__":
