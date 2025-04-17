@@ -1,22 +1,31 @@
 #create unique methods for each class
+#add documentation
+"""
+Henry Hall-Brown
+Period 5
+Unit 2 Take Home Test Portion
+"""
 class Plant:
     garden_size = 0
     def __init__(self, name, scientific_name, age = 0):
         self.name = name
         self.scientific_name = scientific_name
-        self.age = age
+        self.__age = age
         Plant.garden_size += 1
     
     def __repr__(self):
-        return f"Name: {self.name} ({self.scientific_name}) Age: {self.age} years old."
+        return f"Name: {self.name} ({self.scientific_name}) Age: {self.__age} years old."
     
     def __eq__(self, other):
-        if (self.name == other.name and self.scientific_name == other.scientific_name and self.age == other.age):
+        if (self.name == other.name and self.scientific_name == other.scientific_name and self.__age == other.__age):
             return True
         return False
     
     def water(self):
         print(f"Your {self.name} is feeling well watered.")
+        
+    def get_age(self):
+        return self.__age
 
 class Spider_Plant(Plant):
     def __init__(self, name, scientific_name, age, num_plants):
@@ -25,10 +34,10 @@ class Spider_Plant(Plant):
         self.num_plants = num_plants
     
     def __repr__(self):
-        return f"Name: {self.name} ({self.scientific_name}) Age: {self.age} years old. {self.num_plants - 1} offshoots."
+        return f"Name: {self.name} ({self.scientific_name}) Age: {self.__age} years old. {self.num_plants - 1} offshoots."
 
     def __eq__(self, other):
-        if (self.name == other.name and self.scientific_name == other.scientific_name and self.age == other.age and self.num_plants == other.num_plants):
+        if (self.name == other.name and self.scientific_name == other.scientific_name and self.__age == other.__age and self.num_plants == other.num_plants):
             return True
         return False
     
@@ -42,12 +51,12 @@ class Succulent(Plant):
     
     def __repr__(self):
         if(self.bears_fruit):
-            return f"Name: {self.name} ({self.scientific_name}) Age: {self.age} years old. Bears fruit."
+            return f"Name: {self.name} ({self.scientific_name}) Age: {self.__age} years old. Bears fruit."
         else:
-            return f"Name: {self.name} ({self.scientific_name}) Age: {self.age} years old. Does not bear fruit."
+            return f"Name: {self.name} ({self.scientific_name}) Age: {self.__age} years old. Does not bear fruit."
 
     def __eq__(self, other):
-        if (self.name == other.name and self.scientific_name == other.scientific_name and self.age == other.age and self.bears_fruit == other.bears_fruit):
+        if (self.name == other.name and self.scientific_name == other.scientific_name and self.__age == other.__age and self.bears_fruit == other.bears_fruit):
             return True
         return False
     
