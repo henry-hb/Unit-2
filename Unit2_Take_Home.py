@@ -1,9 +1,11 @@
 #add documentation
-"""
-Henry Hall-Brown
-Period 5
-Unit 2 Take Home Test Portion
-"""
+'''
+Name: Henry Hall-Brown
+Date: 4/20/25
+File: Unit2_Take_Home.py
+Description: A program that creates a garden with a few available plant types.
+'''
+
 class Plant:
     garden_size = 0
     def __init__(self, name, scientific_name, age = 0):
